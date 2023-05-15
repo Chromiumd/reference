@@ -1045,6 +1045,30 @@ char * a = STR(object);   #=> char * a = "object";
 #define LOG(msg) console.log(__FILE__, __LINE__, msg)
 #=> console.log("file.txt", 3, "hey")
 ```
+
+### 续行符
+
+```cpp
+#define HELLO() \
+{\
+    printf("hello world!");\
+};
+```
+
+### 防止重复编译
+
+```cpp
+#pragma once
+code...
+
+or
+
+#ifndef UNIQUE_NAME
+#define UNIQUE_NAME
+code...
+#endif //UNIQUE_NAME
+```
+
 <!--rehype:className=wrap-text-->
 
 各种各样的
